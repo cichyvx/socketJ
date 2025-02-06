@@ -42,7 +42,7 @@ public class ConnectionDispatcher {
                                 Map<String, String> headers = httpRequest.headers();
                                 String connection = headers.get("Connection");
 
-                                if (connection != null && !connection.equals(" keep-alive")) {
+                                if (connection != null && !connection.equals("keep-alive")) {
                                     reuseSocket = false;
                                 }
 

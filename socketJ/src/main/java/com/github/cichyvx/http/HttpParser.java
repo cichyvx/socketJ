@@ -115,7 +115,7 @@ public class HttpParser {
                             headerValue = false;
                             headerName = true;
 
-                            headers.put(headerNameString.toString(), headerValueString.toString());
+                            headers.put(headerNameString.toString(), headerValueString.substring(1));
                             headerNameString = new StringBuilder();
                             headerValueString = new StringBuilder();
                         } else {
