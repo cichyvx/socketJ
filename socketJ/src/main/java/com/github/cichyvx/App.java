@@ -1,16 +1,9 @@
 package com.github.cichyvx;
 
-import com.github.cichyvx.socket.SocketListener;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
 
 @ComponentScan(basePackages = "com.github.cichyvx")
+@Configuration
 public class App {
-    public static void main(String[] args) {
-        new AnnotationConfigApplicationContext(App.class);
-    }
-
-    public App(SocketListener socketListener) {
-        socketListener.start();
-    }
 }
